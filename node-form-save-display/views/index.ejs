@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+
+      <fieldset>
+        <form action="/" method="post">
+          <input name="firstName" type="text" placeholder="Enter a first Name" required>
+          <input name="lastName" type="text" placeholder="Enter a Last Name" required>
+          <input type="submit" class="ghost-button" value="Add name">
+        </form>
+      </fieldset>
+
+      <% for(var i=0; i<userData.length; i++) { %>
+          <li>
+               <%= userData[i].firstName + ' ' + userData[i].lastName %>
+          </li>
+      <% } %>
+
+    </div>
+  </body>
+</html>
